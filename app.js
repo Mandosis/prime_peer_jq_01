@@ -3,6 +3,8 @@ var employee = {};
 $(function() {
   $("#employee").on("submit", function(event) {
     event.preventDefault();
+
+    // Set values of inputs to employee object
     employee.firstName = this.first_name.value;
     employee.lastName = this.last_name.value;
     employee.employeeNumber = this.employee_number.value;
@@ -10,6 +12,15 @@ $(function() {
     employee.lastReviewScore = this.review_score.value;
     employee.salary = this.salary.value;
 
+    // Clear inputs
+    $("#first_name").val("");
+    $("#last_name").val("");
+    $("#employee_number").val("");
+    $("#job_title").val("");
+    $("#review_score").val("");
+    $("#salary").val("");
+
+    // Append employee to the DOM
     displayEmployee(employee);
   });
 });
