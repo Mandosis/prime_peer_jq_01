@@ -11,40 +11,40 @@
   <section id="form">
     <form method="post" id="employee">
       <h1>Enter Information</h1>
-
+​
       <div class="container">
-        <input type="text" name="first_name" id="first_name" placeholder="First name" />
+        <input type="text" name="first_name" id="first_name" placeholder="First name" required="required" />
       </div>
-
+​
       <div class="container">
-        <input type="text" name="last_name" id="last_name" placeholder="Last name" />
+        <input type="text" name="last_name" id="last_name" placeholder="Last name" required="required" />
       </div>
-
+​
       <div class="container">
-        <input type="text" name="employee_number" id="employee_number" placeholder="Employee number" />
+        <input type="number" min="0" name="employee_number" id="employee_number" placeholder="Employee number" required="required"/>
       </div>
-
+​
       <div class="container">
-        <input type="text" name="job_title" id="job_title"  placeholder="Job title"/>
+        <input type="text" name="job_title" id="job_title"  placeholder="Job title" required="required"/>
       </div>
-
+​
       <div class="container">
-        <input type="text" name="review_score" id="review_score" placeholder="Last review score"/>
+        <input type="number" min="1" max="5" name="review_score" id="review_score" placeholder="Last review score" required="required"/>
       </div>
-
+​
       <div class="container">
-        <input type="text" name="salary" id="salary" placeholder="Salary" />
+        <input type="number" min="0" name="salary" id="salary" placeholder="Salary" required="required" />
       </div>
-
+​
       <div class="container">
         <input type="submit" />
-        <button>Randomize Employee</button>
       </div>
     </form>
+    <button class="randomize">Randomize Employee</button>
   </section>
-
+​
   <section id="display">
-
+​
   </section>
 </body>
 </html>

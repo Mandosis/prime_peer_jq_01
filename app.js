@@ -1,5 +1,9 @@
 var employee = {};
 
+var firstNameArr = ["Mark", "Peter", "Squanto", "Suzanne", "Chris", "Kyle", "Jen", "Joel", "Ryan", "Millie", "Travis", "Lisa", "Caroline", "Ed", "Oliver"];
+var lastNameArr = ["Squeaky", "Potts", "Potter", "Granger", "Bush", "Johnson", "Obama", "Clinton", "Trump", "Edwards", "Gawarecki", "Hanson", "Sanders"];
+var titleArr = ["Floor Clearner", "CEO", "CTO", "Babysitter", "Nuclear Materials Handler", "Kitten Whisperer", "Executive Producer", "Envelope Licker", "Undercover Bum", "Alien Conspiracy Writer", "Executive in Charge of Imaginary Studies", "Boot Shiner", "Cowboy Wrangler"];
+
 $(function() {
   $("#employee").on("submit", function(event) {
     event.preventDefault();
@@ -12,6 +16,11 @@ $(function() {
     employee.lastReviewScore = this.review_score.value;
     employee.salary = this.salary.value;
 
+    // pushes arrays with new info
+    firstNameArr.push(this.first_name.value);
+    lastNameArr.push(this.last_name.value);
+    titleArr.push(this.job_title.value);
+
     // Clear inputs
     $("#first_name").val("");
     $("#last_name").val("");
@@ -22,10 +31,24 @@ $(function() {
 
     // Append employee to the DOM
     displayEmployee(employee);
+
+  });
+  $(".randomize").on("click", function(event) {
+    event.preventDefault();
+
+   console.log("test");
+    employee.firstName = firstNameArr[Math.floor((Math.random() * firstNameArr.length))];
+    employee.lastName = lastNameArr[Math.floor((Math.random() * lastNameArr.length))];
+    employee.jobTitle = titleArr[Math.floor((Math.random() * titleArr.length))];
+    employee.employeeNumber = Math.floor((Math.random() * 90999) + 10000);
+    employee.lastReviewScore = Math.floor(Math.random() * 5)+1;
+    employee.salary = Math.floor((Math.random() * 200000) + 25000);
+    
+    displayEmployee();
   });
 });
 
-function displayEmployee(person) {
+function displayEmployee() {
   var name = "<div class=\"employeeInfo\"><h1>" + employee.firstName +" "+ employee.lastName + "</h1>";
 
   var number = "<li><span>Employee Number:</span> " + employee.employeeNumber + "</li>";
