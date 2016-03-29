@@ -14,9 +14,18 @@ body {
   border-radius: 3px;
   padding: 10px;
   color: #333;
-  margin-left: auto;
-  margin-right: auto;
-  background: #DDD;
+  margin-left: 50px;
+  background: #FFF;
+  margin-top: 50px;
+  float: left;
+  position: fixed;
+}
+
+#display {
+  width: calc(100% - 470px);
+  min-height: 500px;
+  float: right;
+  margin-right: 50px;
   margin-top: 50px;
 }
 
@@ -40,10 +49,9 @@ ul {
 .employeeInfo {
   background: #333;
   padding: 5px 10px 5px 10px;
-  margin: 10px 20px 10px 20px;
+  margin: 0 0 20px 0;
   color: #FFF;
   border-radius: 3px;
-  width: 400px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -53,7 +61,7 @@ h1 {
 }
 
 span {
-  color: #eee;
+  color: #999;
 }
 
 .one {
@@ -80,20 +88,27 @@ input {
     background-color: white;
     cursor: auto;
     padding: 5px;
-    border-radius: 30px;
     border: none;
     width: 290px;
     height: 30px;
     text-align: center;
     font-size: 16px;
     outline: none;
+    border: 1px solid #EEE;
+    border-radius: 3px;
+    margin-bottom: 20px;
 }
 
-input[type="submit"] {
+input[type="submit"], button {
   background: #337AB7;
   color: #FFF;
   width: 300px;
+  height: 30px;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
 }
 input:focus {
-  box-shadow: 0 0 18px #008800;
+  border-color: #337AB7;
 }

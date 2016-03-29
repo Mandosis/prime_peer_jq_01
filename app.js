@@ -25,7 +25,7 @@ function displayEmployee(person) {
 
   var salary = "<li><span>Salary:</span> " + formatAsCurrency(parseInt(employee.salary)) + "</li>";
   console.log("working");
-  $('.display').append( name+ "<ul>" + number + title + score + salary + "</ul></div>");
+  $('#display').append( name+ "<ul>" + number + title + score + salary + "</ul></div>");
 }
 
 // Format input as currency
