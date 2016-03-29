@@ -26,7 +26,7 @@ body {
   min-height: 500px;
   float: right;
   margin-right: 50px;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 label {
@@ -109,4 +109,25 @@ input[type="submit"], button {
 }
 input:focus {
   border-color: #337AB7;
+}
+
+button {
+  margin-top: 10px;
+}
+
+.total {
+  width: calc(100% - 490px);
+  height: 30px;
+  background: #008800;
+  color: #EEE;
+  float: right;
+  margin-top: 50px;
+  margin-right: 50px;
+  border-radius: 3px;
+  padding: 10px;
+  text-align: center;
+}
+
+.total p {
+  margin-top: 5px;
 }

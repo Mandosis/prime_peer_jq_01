@@ -1,11 +1,13 @@
 var employee = {};
 var totalSalary = 0;
 
-var firstNameArr = ["Mark", "Peter", "Squanto", "Suzanne", "Chris", "Kyle", "Jen", "Joel", "Ryan", "Millie", "Travis", "Lisa", "Caroline", "Ed", "Oliver", "Paul", "George", "Ringo", "Genghis", "Albus", "Charlie", "Dennis", "Dee", "Ronald", "Frank", "Carmen", "Chandler", "Joey", "Regina"];
-var lastNameArr = ["Squeaky", "Potts", "Potter", "Granger", "Bush", "Johnson", "Obama", "Clinton", "Trump", "Edwards", "Gawarecki", "Hanson", "Sanders", "Khan", "Star", "Dumbledore", "Day", "Reynolds", "McDonald", "Sandiego", "Bing", "Tribbiani", "Phalange"];
-var titleArr = ["Floor Clearner", "CEO", "CTO", "Babysitter", "Nuclear Materials Handler", "Kitten Whisperer", "Executive Producer", "Envelope Licker", "Undercover Bum", "Alien Conspiracy Writer", "Executive in Charge of Imaginary Studies", "Boot Shiner", "Cowboy Wrangler", "Meme Creator", "Superpower Researcher", "Dust Collector", "Office Clown", "Paper Airplane Maker", "Bathroom Inspector", "Transponster", "Door Opener", "the guy who orders lunch", "Accountant (but actually just on reddit all day)", "Brownnoser", "Karaoke Guru", "Mic Dropper", "Ice Cube Weigher", "Food Heater Upper", "Cube Stacker", "person who turns on the television when we can't find the remote", "Minister of Magic", "Roller Coaster Tester", "Electric Socket Tester", "King of the Rats", "Children's Cereal Mascot", "Nobody really knows what they do but we give them money", "Human Ladder", "Cheerleader", "Backseat Driver", "Dives for Pennies in Mall Fountains", "Doesn't know the shortcuts for Copy and Paste so types everything out", "Searches for google.com to get to Google", "Firebender", "Robot", "The Chosen One", "Interplanetary Ambassador", "Facial Hair Rater"];
+var firstNameArr = ["Mark", "Peter", "Squanto", "Suzanne", "Chris", "Kyle", "Jen", "Joel", "Ryan", "Millie", "Travis", "Lisa", "Caroline", "Ed", "Oliver", "Paul", "George", "Ringo", "Genghis", "Albus", "Charlie", "Dennis", "Dee", "Ronald", "Frank", "Carmen", "Chandler", "Joey", "Regina", "Matt", "Jamie", "John", "Cersie", "Arya", "Baelon"];
+var lastNameArr = ["Squeaky", "Potts", "Potter", "Granger", "Bush", "Johnson", "Obama", "Clinton", "Trump", "Edwards", "Gawarecki", "Hanson", "Sanders", "Khan", "Star", "Dumbledore", "Day", "Reynolds", "McDonald", "Sandiego", "Bing", "Tribbiani", "Phalange", "Jackson", "Krustev", "Snow", "Stone", "Greyjoy", "Stark", "Lannister", "Mormont", "Dinklage"];
+var titleArr = ["Floor Clearner", "CEO", "CTO", "Babysitter", "Nuclear Materials Handler", "Kitten Whisperer", "Executive Producer", "Envelope Licker", "Undercover Bum", "Alien Conspiracy Writer", "Executive in Charge of Imaginary Studies", "Boot Shiner", "Cowboy Wrangler", "Meme Creator", "Superpower Researcher", "Dust Collector", "Office Clown", "Paper Airplane Maker", "Bathroom Inspector", "Transponster", "Door Opener", "the guy who orders lunch", "Accountant (but actually just on reddit all day)", "Brownnoser", "Karaoke Guru", "Mic Dropper", "Ice Cube Weigher", "Food Heater Upper", "Cube Stacker", "person who turns on the television when we can't find the remote", "Minister of Magic", "Roller Coaster Tester", "Electric Socket Tester", "King of the Rats", "Children's Cereal Mascot", "Nobody really knows what they do but we give them money", "Human Ladder", "Cheerleader", "Backseat Driver", "Dives for Pennies in Mall Fountains", "Doesn't know the shortcuts for Copy and Paste so types everything out", "Searches for google.com to get to Google", "Firebender", "Robot", "The Chosen One", "Interplanetary Ambassador", "Facial Hair Rater", "Joel's job", "Lord of Winterfel", "King of the Andels", "King Slayer"];
 
 $(function() {
+  $(".total").append("<p>Total: " + formatAsCurrency(totalSalary) + "</p>");
+
   $("#employee").on("submit", function(event) {
     event.preventDefault();
 
@@ -66,6 +68,12 @@ function displayEmployee() {
   console.log(totalSalary);
 
   $('#display').prepend( name+ "<ul>" + number + title + score + salary + "</ul></div>");
+  $('.employeeInfo').first().hide().fadeIn();
+
+  $(".total").children().remove();
+  $(".total").append("<p>Total: " + formatAsCurrency(totalSalary) + "</p>");
+
+  console.log(totalSalary);
 }
 
 // Format input as currency
