@@ -1,0 +1,99 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+body {
+  background: #EEE;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#form {
+  width: 300px;
+  background: none;
+  border-radius: 3px;
+  padding: 10px;
+  color: #333;
+  margin-left: auto;
+  margin-right: auto;
+  background: #DDD;
+  margin-top: 50px;
+}
+
+label {
+  display: block;
+  text-align: center;
+}
+
+.container {
+  display: block;
+  margin-bottom: 10px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.employeeInfo {
+  background: #333;
+  padding: 5px 10px 5px 10px;
+  margin: 10px 20px 10px 20px;
+  color: #FFF;
+  border-radius: 3px;
+  width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+span {
+  color: #eee;
+}
+
+.one {
+  color: red;
+}
+
+.two {
+  color: orange;
+}
+
+.three {
+  color: yellow;
+}
+
+.four {
+  color: greenyellow;
+}
+
+.five {
+  color: green;
+}
+
+input {
+    background-color: white;
+    cursor: auto;
+    padding: 5px;
+    border-radius: 30px;
+    border: none;
+    width: 290px;
+    height: 30px;
+    text-align: center;
+    font-size: 16px;
+    outline: none;
+}
+
+input[type="submit"] {
+  background: #337AB7;
+  color: #FFF;
+  width: 300px;
+}
+input:focus {
+  box-shadow: 0 0 18px #008800;
+}
