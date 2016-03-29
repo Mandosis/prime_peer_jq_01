@@ -94,7 +94,7 @@ input {
     outline: none;
     border: 1px solid #EEE;
     border-radius: 3px;
-    margin-bottom: 15px;
+    margin-bottom: 0;
 }
 
 input[type="submit"], button {
